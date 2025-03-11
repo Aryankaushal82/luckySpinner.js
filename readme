@@ -1,8 +1,92 @@
-project subcomponents
-1. deposite some money
-2. determine number of lines to bet on
-3. collect a bet amount
-4. spin the slot machine
-5. check if the user won
-6. give the user their winnings
-7. play again 
+# Lucky Spinner Slot Machine Game
+
+A modern, visually appealing slot machine game built with HTML, CSS, and JavaScript. This web-based game simulates a real slot machine with multiple betting lines, win animations, and a complete game flow.
+
+## Features
+
+- **Modern UI**: Clean, responsive design with animations and visual feedback
+- **Multiple Bet Lines**: Bet on 1-3 lines to increase your chances of winning
+- **Adjustable Betting**: Set your bet amount per line
+- **Win Detection**: Automatic detection and calculation of winning combinations
+- **Game Flow**: Complete game lifecycle with deposit, gameplay, and game over states
+- **Responsive Design**: Works on desktop and mobile devices
+- **Visual Feedback**: Animated spinning reels and color-coded symbols
+
+## How to Play
+
+1. **Start the Game**: Enter your initial deposit amount when prompted
+2. **Place Your Bet**: 
+   - Select the number of lines you want to bet on (1-3)
+   - Set your bet amount per line
+3. **Spin the Reels**: Click the "Spin" button to play
+4. **Check Results**: 
+   - If you win, your balance will be updated and a win message will appear
+   - If you lose, you can try again as long as you have balance
+5. **Game Over**: When your balance reaches zero, you can start a new game
+
+## Winning Combinations
+
+The game uses a symbol-based winning system:
+- **A**: Highest value (5x your bet)
+- **B**: High value (4x your bet)
+- **C**: Medium value (3x your bet)
+- **D**: Low value (2x your bet)
+
+To win, you need to get identical symbols across a betting line.
+
+## Technical Details
+
+### Game Configuration
+
+The game uses the following configuration:
+- 3x3 grid (3 rows, 3 columns)
+- Symbol distribution weighted for fair gameplay
+- Color-coded symbols for better visualization
+
+### Symbol Distribution
+
+The symbols are distributed with the following frequencies:
+- Symbol A: 2 instances (rare, high value)
+- Symbol B: 4 instances
+- Symbol C: 6 instances
+- Symbol D: 8 instances (common, low value)
+
+### Symbol Values
+
+When you win with a line of identical symbols, your bet is multiplied by:
+- Symbol A: 5x multiplier
+- Symbol B: 4x multiplier
+- Symbol C: 3x multiplier
+- Symbol D: 2x multiplier
+
+## Installation
+
+1. Clone or download this repository
+2. Open the `index.html` file in a web browser
+3. No server or additional dependencies required!
+
+## Customization
+
+You can easily customize the game by modifying:
+
+- **Symbols and Values**: Edit the `SYMBOLS_COUNT` and `SYMBOL_VALUES` objects in the JavaScript
+- **Colors**: Change the symbol colors in the `SYMBOL_COLORS` object
+- **UI**: Modify the CSS variables in the `:root` section to change the color scheme
+- **Grid Size**: For advanced customization, you can modify the `ROWS` and `COLS` constants (requires additional UI changes)
+
+## Future Enhancements
+
+Potential features for future versions:
+- Sound effects and background music
+- More symbol types and special symbols (wilds, scatters)
+- Bonus rounds and free spins
+- Persistent high scores
+- Additional betting options
+
+## Credits
+
+Created by Aryan Kaushal as a web development project.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
